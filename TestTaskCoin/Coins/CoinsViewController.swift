@@ -24,6 +24,7 @@ class CoinsViewController: UIViewController, CoinsDisplayLogic {
         searchController.hidesNavigationBarDuringPresentation = false
         searchController.searchBar.placeholder = ""
         searchController.searchBar.isTranslucent = false
+        searchController.searchBar.searchTextField.textColor = .white
         let cancelButtonAttributes = [NSAttributedString.Key.foregroundColor: UIColor.gray]
         UIBarButtonItem.appearance().setTitleTextAttributes(cancelButtonAttributes , for: .normal)
         return searchController
