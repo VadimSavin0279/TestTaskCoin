@@ -13,8 +13,10 @@ extension String {
     }
     
     func round(with value: Int) -> String {
+        if floor(Float(self) ?? 0) == Float(self) {
+            return self
+        }
         if let index = self.firstIndex(of: ".") {
-            
             let index2 = self.index(index, offsetBy: value + 1)
             return String(self[..<index2])
         }

@@ -40,11 +40,11 @@ class DetailPresenter: DetailPresentationLogic {
         let newPercentage = 100.0 + percentage
         let oldCost = cost * 100.0 / newPercentage
         
-        let dif = cost - oldCost
+        var dif = cost - oldCost
         var newStr = ""
         
         newStr = String(abs(dif)).roundToSignificantFigure()
-        
+
         if percentage < 0 {
             newStr = "- " + newStr + " (" + String(abs(percentage)) + "%)"
         } else {
